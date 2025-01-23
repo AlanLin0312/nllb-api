@@ -18,5 +18,5 @@ WORKDIR /app
 COPY . /app
 
 # 设置容器启动时运行的默认命令
-CMD ["/usr/local/bin/nllb-serve"]
+
 
