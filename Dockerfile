@@ -17,10 +17,11 @@ WORKDIR /app
 # 复制当前目录中的所有文件到工作目录
 COPY . /app
 
+# 安装 nllb-serve
 RUN pip install --no-cache-dir git+https://github.com/thammegowda/nllb-serve
 
+# 检查 PATH（可选）
 RUN echo $PATH
 
 # 设置容器启动时运行的默认命令
 CMD ["nllb-serve"]
-
