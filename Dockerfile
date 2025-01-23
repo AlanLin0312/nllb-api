@@ -17,6 +17,8 @@ WORKDIR /app
 # 复制当前目录中的所有文件到工作目录
 COPY . /app
 
+RUN pip install --no-cache-dir git+https://github.com/thammegowda/nllb-serve
+
 # 设置容器启动时运行的默认命令
 CMD ["nllb-serve"]
 
