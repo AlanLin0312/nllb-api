@@ -19,6 +19,8 @@ COPY . /app
 
 RUN pip install --no-cache-dir git+https://github.com/thammegowda/nllb-serve
 
+RUN echo $PATH
+
 # 设置容器启动时运行的默认命令
 CMD ["nllb-serve"]
 
