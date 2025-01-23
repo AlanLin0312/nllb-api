@@ -29,3 +29,7 @@ RUN echo $PATH
 
 # 设置容器启动时运行的默认命令
 CMD ["nllb-serve"]
+
+docker run -it --rm my_nllb_app /bin/bash
+which nllb-serve
+
