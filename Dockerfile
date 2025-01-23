@@ -1,5 +1,5 @@
 # 使用 nllb-api 作为基础镜像
-FROM ghcr.io/winstxnhdw/nllb-api:main
+FROM python:3.9-slim
 
 # 设置环境变量
 ENV SERVER_PORT=7860 \
