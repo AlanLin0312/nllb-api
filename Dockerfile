@@ -1,11 +1,10 @@
-# 使用 nllb-api 作为基础镜像
+# 使用 Python 基础镜像
 FROM python:3.9-slim
 
+# 设置 PYTHONPATH
 ENV PYTHONPATH="/your/custom/path"
-ENV PYTHONPATH="${PYTHONPATH}:/your/custom/path"
 
-
-# 设置环境变量
+# 设置其他环境变量
 ENV SERVER_PORT=7860 \
     OMP_NUM_THREADS=1 \
     CT2_USE_EXPERIMENTAL_PACKED_GEMM=1 \
@@ -29,7 +28,3 @@ RUN echo $PATH
 
 # 设置容器启动时运行的默认命令
 CMD ["nllb-serve"]
-
-docker run -it --rm my_nllb_app /bin/bash
-which nllb-serve
-
