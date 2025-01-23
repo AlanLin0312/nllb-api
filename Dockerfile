@@ -1,6 +1,10 @@
 # 使用 nllb-api 作为基础镜像
 FROM python:3.9-slim
 
+ENV PYTHONPATH="/your/custom/path"
+ENV PYTHONPATH="${PYTHONPATH}:/your/custom/path"
+
+
 # 设置环境变量
 ENV SERVER_PORT=7860 \
     OMP_NUM_THREADS=1 \
